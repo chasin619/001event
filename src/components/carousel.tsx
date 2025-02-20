@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 const Carousel = () => {
   return (
     <Swiper
+    grabCursor
     modules={[EffectFade]}
     effect="fade"
       className="hero-carousel"

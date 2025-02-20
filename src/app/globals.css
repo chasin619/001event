@@ -18,16 +18,24 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  cursor: grab;
+  cursor: default;
 }
 
-.hero-carousel{
+#cursor {
+  @apply fixed top-0 left-0 h-[30px] w-[30px] bg-white rounded-full pointer-events-none text-black;
+  z-index: 999999;
+  mix-blend-mode: exclusion;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
+
+.hero-carousel {
   width: 100vw;
   height: 100vh;
   opacity: 0.6;
 }
 
-.hero-carousel::before{
+.hero-carousel::before {
   content: "";
   position: absolute;
   top: 0;
