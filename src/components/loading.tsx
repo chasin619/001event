@@ -9,7 +9,7 @@ export default function LoadingScreen() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(true), 3000);
+    const timeout = setTimeout(() => setLoading(false), 3000);
 
     let count = setInterval(() => {
       setCounter((prevCounter) => {
@@ -33,7 +33,7 @@ export default function LoadingScreen() {
     <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-50">
       <div className="animate-spin flex justify-center items-center rounded-full bg-transparent h-[18vw] w-[18vw] border-t-4 border-t-gray-800 border border-gray-500">
       </div>
-        <p className="text-5xl absolute top-[46.5vh] left-[44.8vw]">{counter}%</p>
+        <p className="text-5xl absolute top-[47vh] left-[47vw]">{counter}</p>
       <p className="text-[22px] absolute left-[100px] bottom-[80px] uppercase">
         Loading ...
       </p>
