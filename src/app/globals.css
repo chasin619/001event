@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000;
     --foreground: #ededed;
   }
 }
@@ -17,7 +19,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", serif;
   cursor: default;
 }
 
@@ -29,13 +31,8 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.hero-carousel {
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.6;
-}
-
-.hero-carousel::before {
+.dim-effect::before {
+  opacity: 0.4;
   content: "";
   position: absolute;
   top: 0;
@@ -45,23 +42,98 @@ body {
   background-color: #000;
 }
 
+.image-rendering-pixelated {
+  image-rendering: pixelated;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .custom-scrollbar {
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #4b5563 #1f2937;
+  position: fixed;
+  top: 0;
+  @apply left-auto right-0 md:left-[98px] md:right-auto;
+  height: 100vh;
+  width: 4px;
+  border-radius: 5px;
+  z-index: 1000;
 }
 
-/* Webkit Browsers */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+.custom-scrollbar-thumb {
+  width: 100%;
+  height: 50px;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #4b5563;
-  border-radius: 10px;
+.border-custom {
+  border-color: hsla(0, 0%, 100%, 0.07);
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #1f2937;
+/* .bottom-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 168px;
+  background-color: white;
+  height: 1px;
+} */
+
+.top-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.top-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 89px;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.bottom-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 78px;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.bottom-border::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 68px;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s;
 }
 
+.btn:hover .top-border::before {
+  width: 160px;
+}
+
+.btn:hover .top-border::after{
+  width: 0;
+}
+.btn:hover .bottom-border::after {
+  width: 160px;
+}
+
+.btn:hover .bottom-border::before{
+  width: 0;
+}
