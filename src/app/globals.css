@@ -73,15 +73,6 @@ body {
   border-color: hsla(0, 0%, 100%, 0.07);
 }
 
-/* .bottom-border {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 168px;
-  background-color: white;
-  height: 1px;
-} */
-
 .top-border::after {
   content: "";
   position: absolute;
@@ -136,4 +127,9 @@ body {
 
 .btn:hover .bottom-border::before{
   width: 0;
+}
+
+.title{
+  letter-spacing: 2px;
+  @apply font-Poppins text-white text-[55px] font-semibold leading-[1.4];
 }

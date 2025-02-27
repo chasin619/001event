@@ -6,6 +6,7 @@ import Share from "../icons/share";
 import LinkedIn from "../icons/LinkedIn";
 import Instagram from "../icons/instagram";
 import Github from "../icons/github";
+import { usePathname } from "next/navigation";
 
 const onPageLinks = [
   {
@@ -34,6 +35,7 @@ function Navbar() {
   const words = ["Menu", "Open"];
   const [index, setIndex] = useState(0);
   const textRef = useRef<HTMLDivElement>(null);
+  const Pathname = usePathname();
 
   useEffect(() => {
     if (!textRef.current) return;
@@ -138,31 +140,35 @@ function Navbar() {
           </div>
         </div>
         <div className="fixed z-40 right-0 top-0 flex flex-col justify-between items-center h-full pt-[22px] pb-[85px] w-[100px] border-l border-[hsla(0,_0%,_100%,_.07);]">
-          <div className="rotate-[-90deg] text-[13px] tracking-[5px] uppercase pe-20 flex justify-center items-center">
-            <Link
-              href="/contact"
-              className="text-[13px] tracking-[5px] uppercase"
-            >
-              Contact
-            </Link>
-            <span className="ms-1 h-[11px] w-[11px] rounded-full border border-white"></span>
-          </div>
-          <div className="flex flex-col gap-3 relative">
-            {onPageLinks.map((item, index) => (
-              <div key={index} className="w-[1.5px] h-7 flex group">
-                <div className=" absolute w-[100px] h-7 group"></div>
-                <a
-                  href={item.href}
-                  className="w-[1.5px] h-7 bg-white rounded-full hover:rounded-none uppercase relative transition-all duration-500"
+          {Pathname === "/" && (
+            <>
+              <div className="rotate-[-90deg] text-[13px] tracking-[5px] uppercase pe-20 flex justify-center items-center">
+                <Link
+                  href="/contact"
+                  className="text-[13px] tracking-[5px] uppercase"
                 >
-                  <span className="w-0 h-7 group-hover:inline text-black text-center group-hover:w-[170px] absolute hover:right-[-20px] group-hover:right-[-20px] right-0 bg-white transition-all duration-500 overflow-hidden leading-[28px] text-[13px] tracking-[2px]">
-                    {item.text}
-                  </span>
-                </a>
+                  Contact
+                </Link>
+                <span className="ms-1 h-[11px] w-[11px] rounded-full border border-white"></span>
               </div>
-            ))}
-          </div>
-          <p></p>
+              <div className="flex flex-col gap-3 relative">
+                {onPageLinks.map((item, index) => (
+                  <div key={index} className="w-[1.5px] h-7 flex group">
+                    <div className="absolute w-[100px] h-7 group"></div>
+                    <a
+                      href={item.href}
+                      className="w-[1.5px] h-7 bg-white rounded-full hover:rounded-none uppercase relative transition-all duration-500"
+                    >
+                      <span className="w-0 h-7 group-hover:inline text-black text-center group-hover:w-[170px] absolute hover:right-[-20px] group-hover:right-[-20px] right-0 bg-white transition-all duration-500 overflow-hidden leading-[28px] text-[13px] tracking-[2px]">
+                        {item.text}
+                      </span>
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <p></p>
+            </>
+          )}
         </div>
       </div>
     </div>

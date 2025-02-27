@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import Hero from "@/pages/landing/hero";
 import HowWeAre from "@/pages/landing/how-we-are";
