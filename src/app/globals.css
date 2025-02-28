@@ -118,18 +118,56 @@ body {
   width: 160px;
 }
 
-.btn:hover .top-border::after{
+.btn:hover .top-border::after {
   width: 0;
 }
 .btn:hover .bottom-border::after {
   width: 160px;
 }
 
-.btn:hover .bottom-border::before{
+.btn:hover .bottom-border::before {
   width: 0;
 }
 
-.title{
+.title {
   letter-spacing: 2px;
   @apply font-Poppins text-white text-[55px] font-semibold leading-[1.4];
+}
+
+.para {
+  @apply leading-[1.6] max-w-[570px] text-center text-grey-500 font-normal bg-black;
+}
+
+.prompt {
+  letter-spacing: 3px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.design::before {
+  content: "";
+  width: 100px;
+  height: 25px;
+  @apply bg-grey-900 absolute right-[80px] top-0 z-[-1];
+  transform: skew(-10deg);
+}
+
+.line {
+  width: 40px;
+  height: 1px;
+  background-color: hsla(0, 0%, 100%, .07);
+}
+
+.form-input {
+  font-size: 16px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid hsla(0, 0%, 100%, .07);
+  padding-bottom: 10px;
+  color: var(--font-color);
+  margin-top: 10px;
+  margin-bottom: 0;
+  letter-spacing: -.5px;
 }
