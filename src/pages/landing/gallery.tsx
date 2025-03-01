@@ -34,7 +34,7 @@ const accordionItems = [
 
 const Gallery = () => {
   return (
-    <div className="max-w-[1200px] w-[90%] mx-auto bg-black text-white mt-10 px-8 md:px-4">
+    <div id="MyPurpose" className="max-w-[1200px] w-[90%] mx-auto bg-black text-white mt-10 px-8 md:px-4">
       <div className="flex flex-wrap items-center py-24 flex-col md:flex-row">
         {/* Left Side: Image */}
         <div className="flex-1 relative md:-top-[120px] w-full">

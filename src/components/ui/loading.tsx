@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { gsap, CSSPlugin, Expo } from "gsap";
+import { gsap, CSSPlugin} from "gsap";
 gsap.registerPlugin(CSSPlugin);
 
 export default function LoadingScreen() {
@@ -11,7 +11,7 @@ export default function LoadingScreen() {
   useEffect(() => {
     const timeout = setTimeout(() => setLoading(false), 3000);
 
-    let count = setInterval(() => {
+    const count = setInterval(() => {
       setCounter((prevCounter) => {
         if (prevCounter >= 100) {
           clearInterval(count);

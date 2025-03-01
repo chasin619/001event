@@ -6,9 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
-import Button from "./button";
 import gsap from "gsap";
 import Link from "next/link";
+import Image from "next/image";
 
 // Image sources array
 const images = [
@@ -82,9 +82,11 @@ const Carousel = () => {
     >
       {images.map((item, index) => (
         <SwiperSlide key={index} className="">
-          <img
+          <Image
             src={item?.src}
             alt={`Slide ${index + 1}`}
+            width={10000}
+            height={10000}
             className="w-full h-full object-cover"
           />
           <div className="flex justify-center items-center w-screen h-screen absolute top-0 z-[1000] flex-col">
@@ -107,7 +109,7 @@ const Carousel = () => {
               {item?.para}
             </p>
             <div className="relative w-fit mt-5 flex btn">
-              <Link href={item.path} className={`border-x py-4 px-7 ${item.btn ? "block" : "hidden"} `}>
+              <Link href={item.path} className={`border-x-2 py-4 px-7 ${item.btn ? "block" : "hidden"} `}>
                 <div className="top-border"></div>
                 <div className="bottom-border"></div>
                 <span className="text-[13px] tracking-[3px] uppercase font-medium relative z-10">

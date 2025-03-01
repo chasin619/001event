@@ -30,7 +30,7 @@ function footer() {
         </a>
         <div>
           <p className="text-[13px] tracking-[2px] font-normal text-center">
-            2025 &copy; Made with ❤️ by <a href="/">Shehbaz</a>
+            2025 &copy; Made with ❤️ by <Link href="/">Shehbaz</Link>
           </p>
         </div>
       </footer>

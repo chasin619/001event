@@ -22,7 +22,7 @@ function page() {
       </h1>
       <p className="para mt-[15px] mb-0">
         Ready for a change? Starting a partnership is easy! Get a free
-        consultation or request a callback. We`'re always available and excited
+        consultation or request a callback. We&lsquo;&apos;re always available and excited
         to collaborate with you.
       </p>
       <ContactForm />
