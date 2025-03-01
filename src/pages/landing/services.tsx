@@ -43,7 +43,7 @@ const cards = [
 ];
 function services() {
   return (
-    <div className="bg-black">
+    <div id="MyServices" className="bg-black">
       <div className="max-w-[1200px] mx-auto p-[50px] md:p-x-4 ">
         <div className="text-center">
           <span className="tracking-wide text-gray-300">My Services </span>

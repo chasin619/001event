@@ -48,7 +48,7 @@ export const TestimonialSlider = () => {
   };
 
   return (
-    <div className="  flex-col px-4 py-6">
+    <div id="testimonials" className="  flex-col px-4 py-6">
       <div className="max-w-7xl w-full mx-auto grid md:grid-cols-12">
         <div className="mb-16 md:mb-24 md:col-span-5 md:relative">
           <h1 className="text-5xl md:text-5xl font-bold text-white text-left md:w-full md:relative md:top-[-140px]">

@@ -3,10 +3,11 @@ import gsap from "gsap";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Share from "../icons/share";
-import LinkedIn from "../icons/LinkedIn";
+import LinkedIn from "../icons/linkedIn";
 import Instagram from "../icons/instagram";
 import Github from "../icons/github";
 import { usePathname } from "next/navigation";
+import { useSidebar } from "./sidebarContext";
 
 const onPageLinks = [
   {
@@ -69,6 +70,7 @@ function Navbar() {
     });
   };
 
+  const { toggleSidebar } = useSidebar();
   return (
     <div>
       <div className="relative md:flex hidden">
@@ -84,6 +86,7 @@ function Navbar() {
             SARTHAK
           </a>
           <div
+            onClick={toggleSidebar}
             onMouseEnter={handleMouseEnter}
             className="text-sm font-bold text-white cursor-pointer flex justify-center"
           >

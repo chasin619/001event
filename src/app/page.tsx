@@ -4,6 +4,7 @@ import Hero from "@/pages/landing/hero";
 import HowWeAre from "@/pages/landing/how-we-are";
 import Services from "@/pages/landing/services";
 import Gallery from "@/pages/landing/gallery";
+import Clients from "@/components/ui/clients";
 import gsap from "gsap";
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
       <HowWeAre />
       <Services />
       <Gallery />
+      <Clients/>
     </div>
   );
 }

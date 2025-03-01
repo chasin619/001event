@@ -44,7 +44,7 @@ const HowWeAre = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-black text-white py-20 relative">
+    <div id="howWeAre" ref={sectionRef} className="bg-black text-white py-20 relative">
       <div className="max-w-[1200px] w-[90%] mx-auto flex flex-col md:flex-row">
         
         {/* Left Section - Image (Moves Inside Container) */}

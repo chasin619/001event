@@ -7,6 +7,8 @@ import Footer from "@/components/ui/footer";
 import Cursor from "@/components/ui/cursor";
 import CustomScrollbar from "@/components/ui/customScrollbar";
 import Navbar from "@/components/ui/navbar";
+import { SidebarProvider } from "@/components/ui/sidebarContext";
+import Sidebar from "@/components/ui/sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,13 +36,16 @@ export default function RootLayout({
         id="top"
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <CustomScrollbar />
-        <Navbar />
-        <Cursor />
-        <LoadingScreen />
-        {children}
-        <PreFooter />
-        <Footer />
+        <SidebarProvider>
+          <Sidebar />
+          <CustomScrollbar />
+          <Navbar />
+          <Cursor />
+          <LoadingScreen />
+          {children}
+          <PreFooter />
+          <Footer />
+        </SidebarProvider>
       </body>
     </html>
   );
