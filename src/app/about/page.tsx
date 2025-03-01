@@ -1,18 +1,31 @@
 import Image from "next/image";
 import React from "react";
 import AboutBg from "@/../public/images/about-bg.png";
+import AboutCover1 from "@/../public/images/about-cover1.png";
+import AboutCover2 from "@/../public/images/about-cover2.png";
+
+const coverImages = [
+  {
+    alter: "about cover 1",
+    path: AboutCover1,
+  },
+  {
+    alter: "about cover 2",
+    path: AboutCover2,
+  },
+];
 
 function page() {
   return (
     <div className="bg-black">
-      <div className="w-[90%] md:w-[84%] mx-auto h-[450px] flex flex-col justify-center">
+      <div className="w-[90%] md:w-[80%] mx-auto h-[600px] flex flex-col justify-center">
         <h4 className="text-lg   gap-3 relative flex  items-center">
           <span className="bg-grey-900 px-1 capitalize tracking-wider text-gray-400">
             Sarthak kaushik
           </span>
           <span className="line"></span>
         </h4>
-        <h2 className="text-[55px] font-bold my-3 tracking-[2px]">
+        <h2 className="text-[55px] font-bold my-3 tracking-[2px] text-white">
           FULL STACK <br />
           WEB DEVELOPER
         </h2>
@@ -27,36 +40,116 @@ function page() {
         />
       </div>
       <div className="py-[30px] max-w-[1200px] m-auto w-[90%] flex flex-col font-Poppins">
-        <div className="flex flex-col w-full">
-          <div className="w-full grid grid-cols-2 gap-2 justify-center items-end h-[200px] border-b pb-14 border-gray-700">
-            <div className="col-span-1 flex flex-col ">
-              <h4 className="text-lg   gap-3 relative flex  items-center">
+        <div className="flex flex-col w-full min-h-[500px] justify-center ">
+          <div className="w-full grid md:grid-cols-2  gap-2 justify-center items-end md:h-[200px]  pb-10 md:pb-14 border-b border-gray-700">
+            <div className="md:col-span-1 flex flex-col ">
+              <h4 className="text-lg  gap-2 relative flex  items-center">
                 <span className="line"></span>
                 <span className="bg-grey-900 px-2 capitalize tracking-wider text-gray-400">
                   What I do
                 </span>
               </h4>
-              <h1 className="text-[25px] my-2">
+              <h1 className="text-[25px] font-semibold mb-4 md:font-bold my-2 text-white">
                 Protect Your Business and Guarantee Continuous Availability
               </h1>
             </div>
-            <div className=" col-span-1">
-              <p className="text-[16px]">
+            <div className=" md:col-span-1">
+              <p className="text-[16px] text-gray-400">
                 Ensure the security and seamless operation of your business with
                 robust solutions that safeguard your data, maintain high uptime,
                 and provide continuous availability, no matter the challenge.
               </p>
             </div>
           </div>
-          <div className="flex justify-between py-14 text-[20px] font-semibold">
-            <h2>Backend + Fronted</h2>
-            <h2>SEO Optimised</h2>
-            <h2>Responsive Design</h2>
+          <div className="flex flex-col md:flex-row justify-between pt-4 md:py-14 text-[20px] font-semibold text-white">
+            <h2 className="flex py-3">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="check"
+                className="w-5 svg-inline--fa fa-check  text-greenish me-2 font-bold"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                ></path>
+              </svg>{" "}
+              Backend + Fronted
+            </h2>
+            <h2 className="flex py-3">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="check"
+                className="w-5 svg-inline--fa fa-check  text-greenish me-2 font-bold"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                ></path>
+              </svg>{" "}
+              SEO Optimised
+            </h2>
+            <h2 className="flex py-3">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="check"
+                className="w-5 svg-inline--fa fa-check  text-greenish me-2 font-bold"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                ></path>
+              </svg>{" "}
+              Responsive Design
+            </h2>
           </div>
-          <div className="grid md:grid-cols-2">
-            <div className="col-span-1 "></div>
+          <div className="grid md:grid-cols-2 gap-10 my-8 pb-4">
+            {coverImages.map((item, index) => (
+              <div key={index} className="col-span-1 ">
+                <div className="image w-full">
+                  <Image
+                    className="w-full h-[100%] max-h-[268px] md:min-h-[500px] md:max-h-[750px]"
+                    width={100000}
+                    height={100000}
+                    src={item.path}
+                    alt={item.alter}
+                  />
+                </div>
+              </div>
+            ))}
             <div className="col-span-1"></div>
           </div>
+        </div>
+
+        {/* service card section */}
+
+        <div className="bg-grey-900 min-h-[800px] py-16 ">
+          <div className="my-10">
+            <h4 className="text-lg  gap-2 relative flex  items-center my-3 text-gray-400">
+              <span className="line"></span> My
+              <span className="bg-black px-2 capitalize tracking-wider text-gray-400">
+                Services
+              </span>
+            </h4>
+            <h2 className="text-[40px] font-Poppins font-bold text-white tracking-[2px]">
+              I create stunning digital experiences tailored to your needs.
+            </h2>
+          </div>
+          <div className="grid grid-cols-12"></div>
         </div>
       </div>
     </div>
