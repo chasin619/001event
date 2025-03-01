@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export const TestimonialSlider = () => {
+function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -111,4 +111,6 @@ export const TestimonialSlider = () => {
       </div>
     </div>
   );
-};
+}
+
+export default TestimonialSlider;

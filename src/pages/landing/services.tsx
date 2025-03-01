@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React from "react";
 import Innovative from "@/components/icons/innovative";
-import { TestimonialSlider } from "./feed-back";
+import TestimonialSlider from "./feed-back";
 
 const cards = [
   // card 1
@@ -28,7 +28,7 @@ const cards = [
     title: "Web Development",
     para: "Building responsive, scalable, and user-centric websites to drive digital success.",
   },
-  // card 5 
+  // card 5
   {
     icon: Innovative,
     title: "Program management",
@@ -75,14 +75,11 @@ function services() {
         <div className="bg-grey-900 py-8 md:pb-[60px] md:h-[50vh] h-min w-full md:mt-[120px] px-[30px] relative">
           <div className="grid w-full md:grid-cols-12 justify-center items-center mx-auto relative md:top-[-20px]">
             <div className="md:col-span-12 relative md:top-[80px] ">
-             <TestimonialSlider/>
+              <TestimonialSlider />
             </div>
           </div>
-
+        </div>
       </div>
-      </div>
-
-      
     </div>
   );
 }
