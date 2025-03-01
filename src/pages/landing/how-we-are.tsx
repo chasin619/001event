@@ -19,7 +19,6 @@ const HowWeAre = () => {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    const textEl = textRef.current;
     const imageEl = imageRef.current;
 
     // Pin the image container while scrolling through text

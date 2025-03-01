@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSidebar } from "./sidebarContext";
 import gsap from "gsap";
 
@@ -8,36 +8,36 @@ const Navlinks = [
   {
     Serial: "01",
     name: "Home",
-    link: "",
+    link: "/",
   },
   {
     Serial: "02",
     name: "Portfolio",
-    link: "",
+    link: "/portfolio",
   },
   {
     Serial: "03",
     name: "Service",
-    link: "",
+    link: "/services",
   },
   {
     Serial: "04",
     name: "Blog",
-    link: "",
+    link: "/blog",
   },
   {
     Serial: "05",
     name: "About",
-    link: "",
+    link: "/about",
   },
   {
     Serial: "06",
     name: "Contact",
-    link: "",
+    link: "/contact",
   },
 ];
 
-function sidebar() {
+function Sidebar() {
   const { isOpen } = useSidebar();
   const sidebarRef = useRef(null);
 
@@ -53,7 +53,10 @@ function sidebar() {
     }
   }, [isOpen]);
   return (
-    <div className="bg-black fixed top-0 w-screen h-screen z-[40]" ref={sidebarRef}>
+    <div
+      className="bg-black fixed top-0 w-screen h-screen z-[40]"
+      ref={sidebarRef}
+    >
       <div className="border-t border-custom md:w-[calc(100%_-_200px)] w-full m-auto">
         <div className="py-[30px] max-w-[1200px] h-[100vh] m-auto w-[90%] flex justify-center gap-7 items-center font-Poppins ">
           <h1 className=" text-gray-700 text-[8rem] text-center md:text-[14rem] font-bold absolute md:left-24 z-0 opacity-[0.1]">
@@ -63,7 +66,7 @@ function sidebar() {
             <ol className="">
               {Navlinks.map((Item, index) => (
                 <li className="py-4" key={index}>
-                  <Link href="" />
+                  <Link href={Item.link} />
                   <small className="hidden md:block text-gray-600 tracking-wider pe-1 text-sm">
                     {Item.Serial}.
                   </small>
@@ -84,8 +87,8 @@ function sidebar() {
 
               <h1 className="text-yellow-700 py-2">Follow me</h1>
               <p className="text-white">
-                <span className="pe-3">Github.</span>{" "}
-                <span className="pe-3">Linkedin.</span>{" "}
+                <span className="pe-3">Github.</span>
+                <span className="pe-3">Linkedin.</span>
                 <span className="">Instagram.</span>
               </p>
             </div>
@@ -96,4 +99,4 @@ function sidebar() {
   );
 }
 
-export default sidebar;
+export default Sidebar;

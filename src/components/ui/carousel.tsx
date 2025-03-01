@@ -6,9 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
-import Button from "./button";
 import gsap from "gsap";
 import Link from "next/link";
+import Image from "next/image";
 
 // Image sources array
 const images = [
@@ -82,7 +82,7 @@ const Carousel = () => {
     >
       {images.map((item, index) => (
         <SwiperSlide key={index} className="">
-          <img
+          <Image
             src={item?.src}
             alt={`Slide ${index + 1}`}
             className="w-full h-full object-cover"

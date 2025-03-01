@@ -75,7 +75,7 @@ function Navbar() {
     <div>
       <div className="relative md:flex hidden">
         <div className="fixed z-40 left-0 top-0 flex flex-col justify-between items-center h-full pt-[22px] pb-[85px] w-[100px] border-r border-[hsla(0,_0%,_100%,_.07);]">
-          <a
+          <Link
             className="text-light text-[15px] font-normal"
             onMouseEnter={() =>
               gsap.to("#cursor", { scale: 2.6, duration: 0.2 })
@@ -84,7 +84,7 @@ function Navbar() {
             href="/"
           >
             SARTHAK
-          </a>
+          </Link>
           <div
             onClick={toggleSidebar}
             onMouseEnter={handleMouseEnter}
