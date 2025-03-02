@@ -85,6 +85,8 @@ const Carousel = () => {
           <Image
             src={item?.src}
             alt={`Slide ${index + 1}`}
+            width={10000}
+            height={10000}
             className="w-full h-full object-cover"
           />
           <div className="flex justify-center items-center w-screen h-screen absolute top-0 z-[1000] flex-col">

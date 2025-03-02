@@ -59,18 +59,21 @@ function Sidebar() {
     >
       <div className="border-t border-custom md:w-[calc(100%_-_200px)] w-full m-auto">
         <div className="py-[30px] max-w-[1200px] h-[100vh] m-auto w-[90%] flex justify-center gap-7 items-center font-Poppins ">
-          <h1 className=" text-gray-700 text-[8rem] text-center md:text-[14rem] font-bold absolute md:left-24 z-0 opacity-[0.1]">
+          <h1 className=" text-gray-700 text-[8rem] text-center md:text-[14rem] font-bold absolute md:left-24 z-[-1] opacity-[0.1]">
             Menu
           </h1>
           <div className="flex text-gray-300 flex-col items-center md:items-start text-center md:text-left md:justify-center md:w-[70%]">
             <ol className="">
               {Navlinks.map((Item, index) => (
                 <li className="py-4" key={index}>
-                  <Link href={Item.link} />
                   <small className="hidden md:block text-gray-600 tracking-wider pe-1 text-sm">
                     {Item.Serial}.
                   </small>
-                  <span className="text-4xl tracking-widest">{Item.name}</span>
+                  <Link href={Item.link}>
+                    <span className="text-4xl tracking-widest">
+                      {Item.name}
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ol>
