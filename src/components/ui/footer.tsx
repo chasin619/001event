@@ -3,8 +3,10 @@ import React from "react";
 
 function footer() {
   return (
-    <div className="bg-grey-900 border-t border-custom md:w-[calc(100%_-_200px)] w-full m-auto">
-      <footer className="py-[30px] max-w-[1200px] m-auto w-[90%] flex flex-col md:flex-row justify-between gap-7 items-center] font-Poppins">
+    <div className="bg-black">
+
+    <div className="bg-grey-900 border-t border-custom text-white md:w-[calc(100%_-_200px)] w-full m-auto">
+      <footer className="py-[30px] max-w-[1200px] m-auto  w-[90%] flex flex-col md:flex-row justify-between gap-7 items-center] font-Poppins">
         <div className="flex gap-[15px] justify-center">
           <Link
             className="text-[13px] tracking-[2px] font-normal"
@@ -35,6 +37,8 @@ function footer() {
         </div>
       </footer>
     </div>
+    </div>
+
   );
 }
 

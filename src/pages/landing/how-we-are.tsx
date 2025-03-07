@@ -47,8 +47,8 @@ const HowWeAre = () => {
       <div className="max-w-[1200px] w-[90%] mx-auto flex flex-col md:flex-row">
         
         {/* Left Section - Image (Moves Inside Container) */}
-        <div ref={imageContainerRef} className="md:w-1/2 md:h-screen sticky top-0 flex items-center justify-center">
-          <div className="relative w-full max-w-md overflow-hidden h-[400px] md:h-[500px] rounded-lg">
+        <div ref={imageContainerRef} className="order-2 md:w-1/2 sticky top-0 flex items-center justify-center">
+          <div className="relative w-full max-w-md overflow-hidden h-[400px] md:h-[500px] rounded-lg border border-grey-900 p-3">
             <div ref={imageRef} className="absolute inset-0">
               <Image
                 className="w-full h-full object-cover"
@@ -66,8 +66,10 @@ const HowWeAre = () => {
         </div>
 
         {/* Right Section - Moving Text */}
-        <div ref={textRef} className="md:w-1/2 space-y-12 py-10 md:py-20 pl-8">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase">Hi, I am <span className="text-teal-400">Sarthak Kaushik</span></h2>
+        <div ref={textRef} className="md:w-1/2 space-y-12 py-10 md:py-20 pl-8 mt-[50px]">
+          <div className="relative flex md:justify-center">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase md:absolute md:right-[-130px] md:top-[-130px] self-center z-10 tracking-[2px]">Hi, I am  <br /><span className="">Sarthak Kaushik</span></h2> 
+            </div> 
           <p className="text-lg font-bold">Building creative and functional websites, one line of code at a time!</p>
           <p className="text-gray-400 text-[14px] leading-6">
             Started in 2020, I embarked on my journey as a passionate web developer, 
@@ -77,7 +79,8 @@ const HowWeAre = () => {
           {/* Stats */}
           <div className="grid sm:grid-cols-2 gap-6">
             {data.map((item, index) => (
-              <div key={index} className="border border-gray-700 p-4 flex items-center rounded-lg">
+              <div key={index} className="border border-grey-900 p-4 flex items-center rounded-lg">
+                
                 <span className="text-4xl font-bold pr-2">{item.amount}</span>
                 <span className="tracking-wide text-lg">{item.name}</span>
               </div>

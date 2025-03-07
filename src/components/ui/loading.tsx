@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { gsap, CSSPlugin} from "gsap";
+import { gsap, CSSPlugin } from "gsap";
 gsap.registerPlugin(CSSPlugin);
 
 export default function LoadingScreen() {
@@ -9,7 +9,7 @@ export default function LoadingScreen() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 3000);
+    const timeout = setTimeout(() => setLoading(false), 2500);
 
     const count = setInterval(() => {
       setCounter((prevCounter) => {
@@ -19,7 +19,7 @@ export default function LoadingScreen() {
         }
         return prevCounter + 1;
       });
-    }, 25);
+    }, 10);
 
     return () => {
       clearTimeout(timeout);
@@ -30,10 +30,12 @@ export default function LoadingScreen() {
   if (!loading) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-[1000]">
-      <div className="animate-spin flex justify-center items-center rounded-full bg-transparent h-[18vw] w-[18vw] border-t-4 border-t-gray-800 border border-gray-500"></div>
-      <p className="text-5xl absolute top-[47vh] left-[47vw]">{counter}</p>
-      <p className="text-[22px] absolute left-[100px] bottom-[80px] uppercase">
+    <div className="fixed inset-0 flex items-center justify-center bg-grey-900 text-white z-[1000]">
+      <p className="text-base absolute left-[100px] top-[20px] text-grey-500">Sarthak Kaushik</p>
+      <div className="flex justify-center items-center rounded-full bg-transparent h-[18vw] w-[18vw] border-t-4 border-t-gray-800 border border-gray-500">
+        <p className="text-[120px]">{counter}</p>
+      </div>
+      <p className="text-[22px] absolute left-[150px] bottom-[80px] uppercase">
         Loading ...
       </p>
     </div>

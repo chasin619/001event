@@ -109,7 +109,12 @@ const Carousel = () => {
               {item?.para}
             </p>
             <div className="relative w-fit mt-5 flex btn">
-              <Link href={item.path} className={`border-x-2 py-4 px-7 ${item.btn ? "block" : "hidden"} `}>
+              <Link
+                href={item.path}
+                className={`border-x-2 py-4 px-7 ${
+                  item.btn ? "block" : "hidden"
+                } `}
+              >
                 <div className="top-border"></div>
                 <div className="bottom-border"></div>
                 <span className="text-[13px] tracking-[3px] uppercase font-medium relative z-10">

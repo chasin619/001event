@@ -49,8 +49,13 @@ function Clients() {
     <div className="bg-black" id="MyClients">
       <div className="py-[30px] max-w-[1200px] m-auto w-[90%]  font-Poppins px-[20px]">
         <div className="w-full mb-16">
-         
-          <h2 className="text-[40px] tracking-[2px] font-bold">
+        <h4 className="text-lg  gap-2 relative flex  items-center my-3">
+                <span className="line"></span>
+                <span className="bg-grey-900 px-2 capitalize tracking-wider text-gray-400">
+                  Our Client
+                </span>
+              </h4>
+          <h2 className="text-[40px] tracking-[2px] font-bold text-white">
             Your successful, our <br />
             reputation
           </h2>
@@ -59,7 +64,7 @@ function Clients() {
           {clients_logo.map((item, index) => (
             <div
               key={index}
-              className="outr-box border-collapse p-4 border border-gray-700 h-[250px] grow min-w-[250px]"
+              className="outr-box border-collapse p-4 border border-grey-900 h-[250px] grow min-w-[250px]"
             >
               <div className="inr-box bg-grey-900 w-full h-full flex justify-center items-center">
                 <Image

@@ -46,27 +46,33 @@ function services() {
     <div id="MyServices" className="bg-black">
       <div className="max-w-[1200px] mx-auto p-[50px] md:p-x-4 ">
         <div className="text-center">
-          <span className="tracking-wide text-gray-300">My Services </span>
+          <span className="tracking-wide text-gray-300 bg-grey-900 p-2  ">My Services </span>
         </div>
         <div className=" md:w-[80%] mx-auto ">
-          <p className="text-center text-[17px] font-bold md:text-5xl md:my-3 p-3 leading-16">
-            We create stunning digital experiences tailored to yourneeds.
+          <p className="text-center text-[17px] font-bold md:text-[40px] md:my-3 p-3 leading-16 text-white tracking-[2px]">
+            We create stunning <br /> digital experiences tailored to yourneeds.
           </p>
         </div>
-        <div className="card-container grid  sm:grid-cols-12  justify-center items-center md:gap-x-6 gap-6 my-6 mt-[50px]">
+        <div className="card-container grid  sm:grid-cols-12 justify-center  md:gap-x-[80px]  my-6 mt-[50px]">
           {cards.map((item, index) => (
             <div
               key={index}
-              className="text-light md:col-span-4 sm:col-span-6 w-full"
+              className={`text-light md:col-span-4 sm:col-span-6 w-full ${index == 1 || index == 4 ? "pt-16" : ""} ${index == 4 ? "pt-0" : ""}` }
             >
-              <div className="p-3 border border-gray-500 w-full">
-                <div className=" bg-grey-900  p-6 rounded-lg w-[100%] relative">
+              <div className="p-4  w-full relative">
+                <span className="absolute top-[-25px] left-4 text-white">0{++index}</span>
+                <div className="__line__ bg-white top-0"></div>
+                <div className="card-line-t top-0 bg-grey-900"></div>
+                <div className="card_line right-0 bg-grey-900"></div>
+                <div className="card-line-t bottom-0 bg-grey-900"></div>
+                <div className="card_line left-0 bg-grey-900"></div>
+                <div className=" bg-grey-900  p-4 rounded-lg w-[100%] relative">
                   <div className="text-lg w-[70px] ">
                     <item.icon />
                   </div>
                   <div className="flex items-center mb-4"></div>
-                  <h2 className="text-xl font-bold mb-2">{item.title}</h2>
-                  <p className="text-gray-400">{item.para}</p>
+                  <h2 className="text-[20px] font-bold mb-2 font-Poppins text-white tracking-[1px]">{item.title}</h2>
+                  <p className="text-gray-300 text-[16px] tracking-[0.5px]">{item.para}</p>
                 </div>
               </div>
             </div>

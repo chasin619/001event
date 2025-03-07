@@ -39,6 +39,7 @@ const Navlinks = [
 
 function Sidebar() {
   const { isOpen } = useSidebar();
+  const { toggleSidebar } = useSidebar();
   const sidebarRef = useRef(null);
 
   useEffect(() => {
@@ -63,13 +64,13 @@ function Sidebar() {
             Menu
           </h1>
           <div className="flex text-gray-300 flex-col items-center md:items-start text-center md:text-left md:justify-center md:w-[70%]">
-            <ol className="">
+            <ol className="text-center sm:text-left">
               {Navlinks.map((Item, index) => (
-                <li className="py-4" key={index}>
-                  <small className="hidden md:block text-gray-600 tracking-wider pe-1 text-sm">
+                <li className="py-4 " key={index}>
+                  <small className="hidden sm:flex text-gray-600 tracking-wider pe-1 text-sm">
                     {Item.Serial}.
                   </small>
-                  <Link href={Item.link}>
+                  <Link onClick={toggleSidebar} href={Item.link}>
                     <span className="text-4xl tracking-widest">
                       {Item.name}
                     </span>
