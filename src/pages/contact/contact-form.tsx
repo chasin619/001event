@@ -1,4 +1,3 @@
-import Button from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
@@ -15,7 +14,7 @@ function contactForm() {
         </h2>
         <p className="para !text-left mt-5 mb-[30px]">
           At the heart of every brand are the people behind it and those who
-          experience it, and we`'re right there—connecting both.
+          experience it, and we`&apos;re right there—connecting both.
         </p>
         <form action="" className="flex flex-col items-start">
           <div className="mb-4">
@@ -39,7 +38,7 @@ function contactForm() {
             />
           </div>
           <label className="para !text-greenish" htmlFor="">
-            What's up?
+            What&apos;s up?
           </label>
           <textarea
             className="form-input"
@@ -49,20 +48,40 @@ function contactForm() {
           ></textarea>
           <div className="relative w-full mt-5 flex btn justify-end">
             <Link href={""}>
-            <button className="text-white  py-[20px] px-[30px] tracking-[2px] border border-grey-900  uppercase hover:translate-x-2 transition-all ">Send Message</button>
+              <button className="text-white  py-[20px] px-[30px] tracking-[2px] border border-grey-900  uppercase hover:translate-x-2 transition-all ">
+                Send Message
+              </button>
             </Link>
-            </div>
+          </div>
         </form>
       </div>
       <div className="md:col-span-1 flex flex-col justify-center text-gray-300">
-        <h6 className="text-[20px] font-Poppins tracking-[2px] mb-[15px] text-white font-bold">Contact</h6>
+        <h6 className="text-[20px] font-Poppins tracking-[2px] mb-[15px] text-white font-bold">
+          Contact
+        </h6>
         <p className="pt-4">+91 8840053337</p>
-        <Link href="#" className="pb-8 uppercase underline">Contact@sarthakkaushik.com</Link>
-        <h6 className="text-[20px] font-Poppins tracking-[2px] mb-[15px] text-white font-bold">Address</h6>
+        <Link href="#" className="pb-8 uppercase underline">
+          Contact@sarthakkaushik.com
+        </Link>
+        <h6 className="text-[20px] font-Poppins tracking-[2px] mb-[15px] text-white font-bold">
+          Address
+        </h6>
         <p className="pb-8 pt-4 text-[16px]">Varanasi</p>
-        <h6 className="text-[20px] font-Poppins tracking-[2px] mb-[15px] text-white font-bold">Follow Me</h6>
-        <Link href="www.instagram.com" className="uppercase tracking-[2px] font-semibold">INSTAGRAM</Link>
-        <Link href="www.github.com" className="uppercase tracking-[2px] font-semibold">Gihub</Link>
+        <h6 className="text-[20px] font-Poppins tracking-[2px] mb-[15px] text-white font-bold">
+          Follow Me
+        </h6>
+        <Link
+          href="www.instagram.com"
+          className="uppercase tracking-[2px] font-semibold"
+        >
+          INSTAGRAM
+        </Link>
+        <Link
+          href="www.github.com"
+          className="uppercase tracking-[2px] font-semibold"
+        >
+          Gihub
+        </Link>
       </div>
     </div>
   );

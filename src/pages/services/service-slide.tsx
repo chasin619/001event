@@ -3,29 +3,21 @@ import React from "react";
 import ServiceCard1 from "@/../public/images/ServiceCard1.png";
 import { CheckIcon } from "lucide-react";
 
-const ServiceBullets1 =[
-    {
-        pros:"Fully Responsive"
-    },
-    {
-        pros:"SEO Optimised"
-    },
-    {
-        pros:"Email Integration"
-    },
-    {
-        pros:"Lead Generation"
-    },
-] 
-interface ServiceSlideProps {
-    field:string;
-  pic: string;
-  sub_title: string;
-  slogan: string;
-  ServiceBullets: 'Array';
-  
-}
-const ServiceSlide = ({field,pic,sub_title,slogan,ServiceBullets} : ServiceSlideProps) => {
+const ServiceBullets1 = [
+  {
+    pros: "Fully Responsive",
+  },
+  {
+    pros: "SEO Optimised",
+  },
+  {
+    pros: "Email Integration",
+  },
+  {
+    pros: "Lead Generation",
+  },
+];
+const ServiceSlide = () => {
   return (
     <div className="bg-black">
       <div className="md:w-[calc(100%_-_200px)] w-full mx-auto  bg-grey-900">
@@ -53,17 +45,18 @@ const ServiceSlide = ({field,pic,sub_title,slogan,ServiceBullets} : ServiceSlide
                 Create a stunning websites
               </h2>
               <div className="grid md:grid-cols-2 border-gray-600 border-t min-h-[100px] pt-6">
-                {ServiceBullets1.map((item,index)=>(
-
-                
-                <p key={index} className="md:col-span-1 flex py-4 text-gray-400 justify-center w-fit items-center text-[20px]">
-                  <CheckIcon
-                    className="bg-greenish rounded-full h-4 w-4"
-                    fill="black"
-                  />
-                  <span className="ps-3">{item.pros}</span>
-                </p>
-   ))}              
+                {ServiceBullets1.map((item, index) => (
+                  <p
+                    key={index}
+                    className="md:col-span-1 flex py-4 text-gray-400 justify-center w-fit items-center text-[20px]"
+                  >
+                    <CheckIcon
+                      className="bg-greenish rounded-full h-4 w-4"
+                      fill="black"
+                    />
+                    <span className="ps-3">{item.pros}</span>
+                  </p>
+                ))}
               </div>
             </div>
           </div>
